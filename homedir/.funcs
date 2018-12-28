@@ -1,0 +1,30 @@
+#Manages multiple AWS profiles
+awsprofile() {
+	if [[ -v 1 ]]; then
+		if [ $1 = '--list' ]; then
+			/usr/local/bin/gcat ~/.aws/credentials | grep '\[.*]'
+		else
+			echo "setting profile"
+			export AWS_PROFILE=$1
+			aws sts get-caller-identity
+		fi
+	else
+		echo "Current profile: $AWS_PROFILE"
+		aws sts get-caller-identity
+	fi
+}
+
+#Cowsay with random cowfile
+function randomsay() {
+  cow=(`cowsay -l | tail -n +2 | tr  " "  "\n" | sort -R | head -n 1`)
+  cowsay -f $cow "$@"
+}
+
+#Replace cat with imgcat and bat, depending on file type
+function cat() {
+	if file "$1" | grep -qE 'image|bitmap'; then
+		imgcat $1
+	else
+		bat $1
+	fi
+}

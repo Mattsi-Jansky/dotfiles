@@ -1,0 +1,53 @@
+#Shortcut for updating dotfiles
+alias refresh-dotfiles=~/.dotfiles/update.sh
+
+# terraform
+alias tf=terraform
+
+# Use neovim rather than vim
+if type nvim > /dev/null 2>&1; then
+  alias vim='nvim'
+fi
+
+# git
+alias gs='git status -sb'
+alias gb='git branch'
+alias gc='git commit --verbose'
+alias gca='git commit --verbose --all'
+alias gcf='git commit --fixup HEAD'
+alias gco='git checkout'
+alias gia='git add'
+alias giA='git add --patch'
+alias gm='git merge'
+alias gpush='git push'
+alias gpull='git pull'
+alias gpf='git push --force-with-lease'
+alias gr='git rebase'
+alias gra='git rebase --abort'
+alias grc='git rebase --continue'
+alias gri='git rebase --interactive'
+alias gst='git stash'
+alias gwd='git diff --no-ext-diff'
+alias gu='git reset HEAD~1' # undo the last commit
+alias gl='gll -20'
+alias gll="git log --pretty='format:%C(yellow)%h %C(blue)%ad %C(reset)%s%C(red)%d %C(green)%an%C(reset), %C(cyan)%ar' --date=short"
+alias gspop='git stash pop'
+
+# ls
+alias l='ls -1A' # one column
+alias ll='ls -lhFg' # lists w/human sizes
+alias la='ls -alhFg' # lists w/human sizes, w/hidden
+alias lr='ll -R' # lists w/human sizes, recursively
+
+# df/du
+alias df='df -kh'
+alias du='du -kh'
+
+# Grep
+alias grep='grep --color=auto'
+
+# Tree
+alias tree='tree -I "node_modules|tmp"'
+
+# Pretty print the PATH
+alias path='echo $PATH | tr -s ":" "\n"'
