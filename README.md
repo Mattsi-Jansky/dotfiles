@@ -15,4 +15,4 @@ Acknowledgents
 ==============
 
  * Adam Eivy, several of the bash files are hacked together from bits of his dotfiles.
- * Nick Charlton and Thoughtbot, I learned about Brewfiles and a few other bits by reading their dotfiles.
+ * Nick Charlton and thoughtbot, I learned about Brewfiles and a few other bits by reading their dotfiles.
