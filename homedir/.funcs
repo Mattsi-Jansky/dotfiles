@@ -28,3 +28,6 @@ function cat() {
 		bat $1
 	fi
 }
+
+drm() { docker rm $(docker ps -a -q); }
+dri() { docker rmi $(docker images -q); }
