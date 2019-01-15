@@ -51,3 +51,6 @@ alias tree='tree -I "node_modules|tmp"'
 
 # Pretty print the PATH
 alias path='echo $PATH | tr -s ":" "\n"'
+
+# Docker
+alias dr='docker'
