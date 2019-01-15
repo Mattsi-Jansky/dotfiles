@@ -45,6 +45,7 @@ cask "firefox-nightly"
 cask "tor-browser"
 cask "spotify"
 cask "iterm2"
+cask "alfred"
 
 #Fonts
 cask "font-inconsolata-dz"
