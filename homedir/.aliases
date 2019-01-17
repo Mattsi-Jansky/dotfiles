@@ -54,3 +54,4 @@ alias path='echo $PATH | tr -s ":" "\n"'
 
 # Docker
 alias dr='docker'
+alias dc='docker-compose'
