@@ -29,6 +29,8 @@ cask "dotnet-sdk"
 brew "tree"
 tap "eddieantonio/eddieantonio" #for Brewcat
 brew "imgcat"
+brew "exercism"
+brew "lolcat"
 
 #Docker
 cask "docker"
@@ -46,6 +48,7 @@ cask "tor-browser"
 cask "spotify"
 cask "iterm2"
 cask "alfred"
+cask "postman"
 
 #Fonts
 cask "font-inconsolata-dz"

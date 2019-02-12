@@ -28,4 +28,4 @@ source $ZSH/oh-my-zsh.sh
 source ~/.iterm2_shell_integration.zsh
 
 #Fortune prompt
-fortune | randomsay
+fortune | randomsay | lolcat
