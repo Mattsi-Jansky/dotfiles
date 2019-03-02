@@ -31,6 +31,7 @@ tap "eddieantonio/eddieantonio" #for Brewcat
 brew "imgcat"
 brew "exercism"
 brew "lolcat"
+brew "postgresql"
 
 #Docker
 cask "docker"
