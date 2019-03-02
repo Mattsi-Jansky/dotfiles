@@ -29,3 +29,6 @@ source ~/.iterm2_shell_integration.zsh
 
 #Fortune prompt
 fortune | randomsay | lolcat
+
+#iTerm2 tab titles
+function chpwd(){ echo -ne "\033]0;${PWD##/*/}\007" }
