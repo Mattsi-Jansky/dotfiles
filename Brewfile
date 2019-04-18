@@ -32,6 +32,9 @@ brew "imgcat"
 brew "exercism"
 brew "lolcat"
 brew "postgresql"
+brew "graphviz"
+cask "powershell"
+brew "diff-so-fancy"
 
 #Docker
 cask "docker"
