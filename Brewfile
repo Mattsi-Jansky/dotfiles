@@ -35,6 +35,7 @@ brew "postgresql"
 brew "graphviz"
 cask "powershell"
 brew "diff-so-fancy"
+brew "autojump"
 
 #Docker
 cask "docker"

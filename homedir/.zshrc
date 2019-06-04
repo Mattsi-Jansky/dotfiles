@@ -14,7 +14,8 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 #oh-my-zsh plugins
 plugins=(
     osx
-    history)
+    history
+    autojump)
 
 # Add bashrc settings
 if [ -f ~/.bashrc ]; then
