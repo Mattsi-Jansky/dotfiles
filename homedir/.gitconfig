@@ -48,6 +48,7 @@
   # prevent crlf (then you will have to deal with the problem -- dos2unix, etc)
   #safecrlf = true
   editor = vim
+	pager = diff-so-fancy | less --tabs=4 -RFX
   #editor = subl -w
 
 [alias]
