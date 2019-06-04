@@ -137,8 +137,6 @@ function configureTerminalAndShell() {
     curl -L https://iterm2.com/misc/install_shell_integration.sh | bash
     #Update default shell
     sudo chsh -s $(which zsh)
-    #Add diff-so-fancy to git diffs
-    git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 
     ok "Terminal and shell configured."
 }
