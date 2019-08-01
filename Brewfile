@@ -36,6 +36,7 @@ brew "graphviz"
 cask "powershell"
 brew "diff-so-fancy"
 brew "autojump"
+brew "git-lfs"
 
 #Docker
 cask "docker"

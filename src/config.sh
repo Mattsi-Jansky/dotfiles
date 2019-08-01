@@ -207,3 +207,7 @@ function configureNode() {
 
     ok
 }
+
+function configureGitLfs() {
+    git lfs install
+}

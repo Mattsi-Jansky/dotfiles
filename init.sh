@@ -23,6 +23,7 @@ configureTerminalAndShell
 configureSecurity
 configureSsh
 configureNode
+configureGitLfs
 
 #Link dotfiles
 createSymlinks
