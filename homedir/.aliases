@@ -32,6 +32,7 @@ alias gu='git reset HEAD~1' # undo the last commit
 alias gl='gll -20'
 alias gll="git log --pretty='format:%C(yellow)%h %C(blue)%ad %C(reset)%s%C(red)%d %C(green)%an%C(reset), %C(cyan)%ar' --date=short"
 alias gspop='git stash pop'
+alias gtree='git log --all --graph --decorate --oneline'
 
 # ls
 alias l='ls -1A' # one column
