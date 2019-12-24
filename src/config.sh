@@ -100,6 +100,8 @@ function configure() {
     defaults write com.apple.dock static-only -bool true
     #Change minimize/maximize window effect to scale
     defaults write com.apple.dock mineffect -string "scale"
+    #Longer autohide-delay
+    defaults write com.apple.Dock autohide-delay -float 5 
     ok
 
     running "Disabling dashboard"
