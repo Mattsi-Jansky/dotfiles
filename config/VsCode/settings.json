@@ -1,3 +1,4 @@
 {
-    "window.zoomLevel": 1
+    "window.zoomLevel": 1,
+    "terminal.integrated.fontFamily": "Roboto Mono for Powerline"
 }
