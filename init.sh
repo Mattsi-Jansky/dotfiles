@@ -9,7 +9,6 @@ loadDependencies
 
 #Install apps
 requireHomebrew
-requireHomebrewCask
 requireBrewfileDependencies
 
 #Install shell & terminal emulator extensions

@@ -24,21 +24,6 @@ requireHomebrew() {
     fi
 }
 
-requireHomebrewCask() {
-    running "checking Homebrew Cask install"
-    output=$(brew tap | grep cask)
-    if [[ $? != 0 ]]; then
-        action "installing brew-cask"
-        run "brew install caskroom/cask/brew-cask"
-        if [[ $? != 0 ]]; then
-            error "failed to install Homebrew Cask! aborting..."
-            exit 2
-        fi
-    fi
-    brew tap caskroom/versions > /dev/null 2>&1
-    ok
-}
-
 requireBrewfileDependencies() {
     silently pushd $dotfilesPath
     brew bundle
