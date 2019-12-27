@@ -196,7 +196,7 @@ function configureNode() {
     #See: https://github.com/creationix/nvm/issues/855#issuecomment-370187398
     brew uninstall --ignore-dependencies --force node
     brew uninstall --ignore-dependencies --force npm
-    brew prune
+    brew cleanup
 
     #Ensure latest node installed in NVM
     export NVM_DIR="$HOME/.nvm"
