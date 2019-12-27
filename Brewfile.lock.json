@@ -5,7 +5,7 @@
         "revision": "eca39722f130e8bc1e2e322588db493ca0398c01"
       },
       "homebrew/cask": {
-        "revision": "f144bd2650035fca8ef9b58d763a7e5286de474e"
+        "revision": "4b0e179003179c8bf45729e948df54b30c75ddcd"
       },
       "wata727/tflint": {
         "revision": "35b4067f9361cba2e7d32ee20d060b36aec1bb99"
@@ -753,7 +753,7 @@
       "catalina": {
         "HOMEBREW_VERSION": "2.2.2",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "a8fbaf24469aef676d5457eca3631bb5ba83391d",
+        "Homebrew/homebrew-core": "dcd99cc57a18b58eac134d244d7db84fca8743b9",
         "CLT": "11.3.0.0.1.1574140115",
         "Xcode": "11.3",
         "macOS": "10.15.2"
