@@ -54,6 +54,10 @@ requireTerminalTheme() {
     running "Installing the Patched Solarized Dark theme for iTerm"
     open "$dotfilesPath/config/iterm-styles/Solarized Dark Patch.itermcolors"
     ok
+
+    running "Installing Brogrammer theme for iTerm"
+    open "$dotfilesPath/config/iterm-styles/Brogrammer.itermcolors"
+    ok
 }
 
 requireNvm() {

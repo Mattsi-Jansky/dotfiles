@@ -60,8 +60,6 @@ cask "postman"
 cask "macpass"
 
 #Fonts
-cask "font-inconsolata-dz"
-cask "font-inconsolata-dz-for-powerline"
 cask "font-fontawesome"
 cask "font-awesome-terminal-fonts"
 cask "font-hack"
