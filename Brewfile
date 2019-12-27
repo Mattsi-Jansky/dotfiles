@@ -39,6 +39,7 @@ brew "diff-so-fancy"
 brew "autojump"
 brew "git-lfs"
 brew "node"
+brew "hub"
 
 #Docker
 cask "docker"
