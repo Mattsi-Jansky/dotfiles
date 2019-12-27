@@ -24,6 +24,7 @@ configureSecurity
 configureSsh
 configureNode
 configureGitLfs
+configureVisualStudioCode
 
 #Link dotfiles
 createSymlinks

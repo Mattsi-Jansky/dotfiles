@@ -215,3 +215,12 @@ function configureNode() {
 function configureGitLfs() {
     git lfs install
 }
+
+function configureVisualStudioCode() {
+    running "Configuring VSCode"
+
+    ln -s "$dotfilesPath/config/VSCode/settings.json" ~/Library/Application\ Support/Code/User/settings.json
+    ln -s "$dotfilesPath/config/VSCode/keybindings.json" ~/Library/Application\ Support/Code/User/keybindings.json
+
+    ok
+}

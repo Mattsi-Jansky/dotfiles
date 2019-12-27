@@ -16,6 +16,7 @@ configureTerminalAndShell
 configureSecurity
 configureSsh
 configureNode
+configureVisualStudioCode
 
 #Link dotfiles
 createSymlinks
