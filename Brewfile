@@ -1,7 +1,8 @@
 tap "homebrew/services"
-tap "caskroom/cask"
+tap "homebrew/cask"
 tap "wata727/tflint"
-tap "caskroom/fonts"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
 
 #CLI apps
 brew "ack"
@@ -37,6 +38,7 @@ cask "powershell"
 brew "diff-so-fancy"
 brew "autojump"
 brew "git-lfs"
+brew "node"
 
 #Docker
 cask "docker"
@@ -55,6 +57,7 @@ cask "spotify"
 cask "iterm2"
 cask "alfred"
 cask "postman"
+cask "macpass"
 
 #Fonts
 cask "font-inconsolata-dz"
