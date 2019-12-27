@@ -6,6 +6,7 @@ function loadDependencies() {
     source "$libpath/echos.sh"
     source "$libpath/requirers.sh"
     source "$libpath/config.sh"
+    source "$libpath/vscode.sh"
 }
 
 function run() {
@@ -37,6 +38,6 @@ function createSymLink() {
     ln -s $dotfilesPath/homedir/$file ~/$file
 }
 
-cleanup() {
+function cleanup() {
     silently brew cleanup
 }

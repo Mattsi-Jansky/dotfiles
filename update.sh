@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-dotfilesPath="/Users/$USER/.dotfiles"
+dotfilesPath="$HOME/.dotfiles"
 libpath="$dotfilesPath/src"
 
 #Script dependencies
