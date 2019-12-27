@@ -55,3 +55,7 @@ requireTerminalTheme() {
     open "$dotfilesPath/config/iterm-styles/Solarized Dark Patch.itermcolors"
     ok
 }
+
+requireNvm() {
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
+}
