@@ -745,6 +745,9 @@
       },
       "font-input": {
         "version": "latest"
+      },
+      "gimp": {
+        "version": "2.10.14"
       }
     }
   },
