@@ -58,6 +58,7 @@ cask "iterm2"
 cask "alfred"
 cask "postman"
 cask "macpass"
+cask "GIMP"
 
 #Fonts
 cask "font-fontawesome"
