@@ -1,4 +1,6 @@
 {
     "window.zoomLevel": 1,
-    "terminal.integrated.fontFamily": "Roboto Mono for Powerline"
+    "terminal.integrated.fontFamily": "Roboto Mono for Powerline",
+    "workbench.iconTheme": "vscode-icons",
+    "vsicons.dontShowNewVersionMessage": true
 }
