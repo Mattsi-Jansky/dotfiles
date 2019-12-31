@@ -80,6 +80,12 @@ function configure() {
     defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
     #Disable the warning when changing a file extension
     defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+    #Disable Desktop icons
+    defaults write com.apple.finder CreateDesktop -bool false
+    ok
+
+    running "Restarting Finder"
+    killFinderAndWaitForItToRestart
     ok
 
     #
@@ -114,7 +120,9 @@ function configure() {
     defaults write com.apple.dock mru-spaces -bool false
     ok
 
+    running "Restarting Dock"
     killDockAndWaitForItToRestart
+    ok
 
     #
     # Mission Control
@@ -170,9 +178,17 @@ function configureSecurity() {
 }
 
 function killDockAndWaitForItToRestart() {
-    running "Restarting Dock to apply changes"
-    killall Dock
-    until pids=$(ps -A | grep -m1 Dock)
+    killServiceAndWaitForItToRestart Dock
+}
+
+function killFinderAndWaitForItToRestart() {
+    killServiceAndWaitForItToRestart Finder
+}
+
+function killServiceAndWaitForItToRestart() {
+    running "Restarting $1 to apply changes"
+    killall $1
+    until pids=$(ps -A | grep -m1 $1)
     do   
         sleep 1
     done
