@@ -2,5 +2,6 @@
     "window.zoomLevel": 1,
     "terminal.integrated.fontFamily": "Roboto Mono for Powerline",
     "workbench.iconTheme": "vscode-icons",
-    "vsicons.dontShowNewVersionMessage": true
+    "vsicons.dontShowNewVersionMessage": true,
+    "editor.tabSize": 2
 }
