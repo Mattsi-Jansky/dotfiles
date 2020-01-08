@@ -61,3 +61,6 @@ alias dc='docker-compose'
 alias paket="~/.dotnet/tools/paket"
 alias dn="dotnet"
 alias dnt="dotnet test"
+
+#ps
+alias ps="ps -wax"
