@@ -29,6 +29,7 @@ function installVisualStudioCodeExtensions() {
     installVsCodeExtension ms-vscode.csharp
     installVsCodeExtension eamodio.gitlens
     installVsCodeExtension vscode-icons-team.vscode-icons
+    installVsCodeExtension mauve.terraform
 
     ok "VSCode extensions installed"
 }
