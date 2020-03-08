@@ -5,5 +5,8 @@
     "vsicons.dontShowNewVersionMessage": true,
     "editor.tabSize": 2,
     "FSharp.fsiFilePath": "/usr/local/bin/dotnet",
-    "FSharp.fsiExtraParameters": ["fsi"]
+    "FSharp.fsiExtraParameters": [
+        "fsi"
+    ],
+    "files.autoSave": "onFocusChange"
 }
