@@ -17,7 +17,7 @@ function symLinkVsCode() {
     dotfilePath="$dotfilesPath/config/VSCode/$1"
 
     silently unlink $configFilePath
-    silently ln -s dotfilePath $configFilePath
+    silently ln -s $dotfilePath $configFilePath
 }
 
 function installVisualStudioCodeExtensions() {
