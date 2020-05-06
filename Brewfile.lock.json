@@ -756,18 +756,6 @@
           "full_name": "font-hack"
         }
       },
-      "font-inconsolata-dz-for-powerline": {
-        "version": "latest",
-        "options": {
-          "full_name": "font-inconsolata-dz-for-powerline"
-        }
-      },
-      "font-inconsolata-g-for-powerline": {
-        "version": "latest",
-        "options": {
-          "full_name": "font-inconsolata-g-for-powerline"
-        }
-      },
       "font-roboto-mono": {
         "version": "latest",
         "options": {
