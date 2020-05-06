@@ -8,5 +8,8 @@
     "FSharp.fsiExtraParameters": [
         "fsi"
     ],
-    "files.autoSave": "onFocusChange"
+    "files.autoSave": "onFocusChange",
+    "gitlens.advanced.messages": {
+        "suppressLineUncommittedWarning": true
+    }
 }
