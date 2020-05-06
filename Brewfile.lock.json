@@ -768,12 +768,6 @@
           "full_name": "font-inconsolata-g-for-powerline"
         }
       },
-      "font-inconsolata-for-powerline": {
-        "version": "latest",
-        "options": {
-          "full_name": "font-inconsolata-for-powerline"
-        }
-      },
       "font-roboto-mono": {
         "version": "latest",
         "options": {
