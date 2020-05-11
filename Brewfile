@@ -60,7 +60,8 @@ cask "postman"
 cask "macpass"
 cask "GIMP"
 
-#Fonts
+#Fonts (require SVN)
+brew "svn"
 cask "font-fontawesome"
 cask "font-awesome-terminal-fonts"
 cask "font-hack"
