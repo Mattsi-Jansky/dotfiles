@@ -59,6 +59,7 @@ cask "alfred"
 cask "postman"
 cask "macpass"
 cask "GIMP"
+cask "rider"
 
 #Fonts (require SVN)
 brew "svn"
