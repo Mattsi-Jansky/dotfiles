@@ -9,6 +9,8 @@ loadDependencies
 
 #Install apps
 requireBrewfileDependencies
+requireSdkMan
+requireJavaVersions
 
 #Apply config settings
 configure

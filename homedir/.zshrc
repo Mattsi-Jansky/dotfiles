@@ -33,3 +33,7 @@ fortune | randomsay | lolcat
 
 #iTerm2 tab titles
 function chpwd(){ echo -ne "\033]0;${PWD##/*/}\007" }
+
+#SDKMAN
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "/Users/mattsi/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/mattsi/.sdkman/bin/sdkman-init.sh"
