@@ -32,7 +32,13 @@ source ~/.iterm2_shell_integration.zsh
 fortune | randomsay | lolcat
 
 #iTerm2 tab titles
-function chpwd(){ echo -ne "\033]0;${PWD##/*/}\007" }
+function chpwd() {
+	title=${PWD##/*/}
+	if git rev-parse --git-dir > /dev/null 2>&1; then
+		title=$(basename `git rev-parse --show-toplevel`)
+	fi
+	echo -ne "\033]0;${title}\007"
+}
 
 #SDKMAN
 export SDKMAN_DIR="$HOME/.sdkman"
