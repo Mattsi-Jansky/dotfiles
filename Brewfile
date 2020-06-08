@@ -47,7 +47,7 @@ brew "docker-compose-completion"
 brew "docker-machine-completion"
 
 #GUI apps
-cask "intellij-idea-ce"
+cask "intellij-idea"
 cask "visual-studio-code"
 cask "slack"
 cask "google-chrome"
