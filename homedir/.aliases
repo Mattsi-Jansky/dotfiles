@@ -64,3 +64,6 @@ alias dnt="dotnet test"
 
 #ps
 alias ps="ps -wax"
+
+#Groovy Wrapper alias
+alias gw="./gradlew"
