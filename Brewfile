@@ -35,10 +35,10 @@ brew "lolcat"
 brew "postgresql"
 brew "graphviz"
 cask "powershell"
-brew "diff-so-fancy"
 brew "autojump"
 brew "git-lfs"
 brew "hub"
+brew "git-delta"
 
 #Docker
 cask "docker"
