@@ -11,5 +11,12 @@
     "files.autoSave": "onFocusChange",
     "gitlens.advanced.messages": {
         "suppressLineUncommittedWarning": true
-    }
+    },
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "java.semanticHighlighting.enabled": true,
+    "java.project.importHint": false,
+    "FSharp.suggestGitignore": false,
+    "FSharp.suggestSdkScripts": false,
+    "java.configuration.checkProjectSettingsExclusions": false
 }
