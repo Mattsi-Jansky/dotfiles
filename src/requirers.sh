@@ -86,13 +86,13 @@ requireJavaVersions() {
     running "Install Java versions"
 
     action "Installing Java 8"
-    silently sdk install java 8.0.252-zulu
+    silently sdk install java 8.0.265-zulu
 
     action "Installing Java 11"
-    silently sdk install java 11.0.7-zulu
+    silently sdk install java 11.0.8-zulu
 
     action "Installing Java 14"
-    silently sdk install java 14.0.1-zulu
+    silently sdk install java 14.0.2-zulu
 
     ok
 }
