@@ -32,3 +32,4 @@ function cat() {
 drm() { docker rm $(docker ps -a -q); }
 dri() { docker rmi $(docker images -q); }
 drk() { docker kill $(docker ps -q) }
+drv() { docker volume prune }
