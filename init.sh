@@ -13,6 +13,7 @@ requireBrewfileDependencies
 requireNvm #Doesn't support homebrew so we do it differently
 requireSdkMan
 requireJavaVersions
+requireRustVersions
 
 #Install shell & terminal emulator extensions
 requireOhMyZsh

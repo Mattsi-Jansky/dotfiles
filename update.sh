@@ -11,6 +11,7 @@ loadDependencies
 requireBrewfileDependencies
 requireSdkMan
 requireJavaVersions
+requireRustVersions
 
 #Apply config settings
 configure

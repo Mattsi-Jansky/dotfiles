@@ -39,6 +39,7 @@ brew "autojump"
 brew "git-lfs"
 brew "hub"
 brew "git-delta"
+brew "rustup"
 
 #Docker
 cask "docker"

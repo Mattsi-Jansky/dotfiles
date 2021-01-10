@@ -96,3 +96,9 @@ requireJavaVersions() {
 
     ok
 }
+
+requireRustVersions() {
+
+    rustup-init -y
+}
+
