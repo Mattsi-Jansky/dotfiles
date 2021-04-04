@@ -4,9 +4,9 @@ function authenticateSudo() {
 
 function loadDependencies() {
     source "$libpath/echos.sh"
-    source "$libpath/requirers.sh"
-    source "$libpath/config.sh"
     source "$libpath/vscode.sh"
+    source "$libpath/config.sh"
+    source "$libpath/requirers.sh"
 }
 
 function run() {
@@ -20,24 +20,28 @@ function silently() {
 
 function createSymlinks() {
     action "Linking dotfiles"
-    silently pushd $dotfilesPath/homedir
+    createSymlinksFor shared
+    createSymlinksFor $environment
+    ok "dotfiles linked"
+}
+
+function createSymlinksFor() {
+    source="$1"
+    action "Linking dotfiles"
+    silently pushd $dotfilesPath/homedir/$1
         for file in .*; do
-            if [[ $file == "." || $file == ".." ]]; then continue; fi
+            if [[ $file == "." || $file == ".." || $file == ".git" ]]; then continue; fi
             running "~/$file"
-            createSymLink $file
+            createSymLink $file $source
             echo -en '\tlinked'
             ok
         done
     silently popd
-    ok "dotfiles linked"
 }
 
 function createSymLink() {
     file="$1"
+    source="$2"
     silently unlink ~/$file
-    ln -s $dotfilesPath/homedir/$file ~/$file
-}
-
-function cleanup() {
-    silently brew cleanup
+    ln -s $dotfilesPath/homedir/$source/$file ~/$file
 }

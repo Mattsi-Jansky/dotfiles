@@ -20,16 +20,27 @@ function randomsay() {
   cowsay -f $cow "$@"
 }
 
-#Replace cat with imgcat and bat, depending on file type
-function cat() {
-	if file "$1" | grep -qE 'image|bitmap'; then
-		imgcat $1
-	else
-		bat $1
-	fi
-}
+if [ $(uname) = "Linux" ]; then
+	alias cat=batcat
+elif [ $(uname) = "Darwin" ]; then
+	function cat() {
+		if file "$1" | grep -qE 'image|bitmap'; then
+			imgcat $1
+		else
+			bat $1
+		fi
+	}
+fi
 
-drm() { docker rm $(docker ps -a -q); }
-dri() { docker rmi $(docker images -q); }
-drk() { docker kill $(docker ps -q) }
-drv() { docker volume prune }
+drm() {
+	docker rm $(docker ps -a -q)
+}
+dri() {
+	docker rmi $(docker images -q)
+}
+drk() {
+	docker kill $(docker ps -q)
+}
+drv() {
+	docker volume prune
+}

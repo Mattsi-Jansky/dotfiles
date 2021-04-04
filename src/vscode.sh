@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 function configureVisualStudioCode() {
     symLinkVsCodeConfig
     installVisualStudioCodeExtensions
@@ -13,8 +15,12 @@ function symLinkVsCodeConfig() {
 }
 
 function symLinkVsCode() {
-    configFilePath="$HOME/Library/Application Support/Code/User/$1"
-    dotfilePath="$dotfilesPath/config/VsCode/$1"
+    dotfilePath="$dotfilesPath/config/VsCode/$environment/$1"
+    if [ environment = "Darwin" ]; then
+        configFilePath="$HOME/Library/Application Support/Code/User/$1"
+    else
+        configFilePath="$HOME/.config/Code/User/$1"
+    fi
 
     silently unlink $configFilePath
     silently ln -s $dotfilePath $configFilePath

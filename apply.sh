@@ -2,28 +2,29 @@
 
 dotfilesPath="$HOME/.dotfiles"
 libpath="$dotfilesPath/src"
+environment="$(uname)"
 
 #Script dependencies
 source "$libpath/common.sh"
 loadDependencies
 
-#Install apps
-requireBrewfileDependencies
+#Load platform-specific dependencies
+$libpath/$environment/apply.sh
+
+#Install cross-platform apps
+requireNvm
 requireSdkMan
 requireJavaVersions
 requireRustVersions
 
 #Apply config settings
-configure
-configureTerminalAndShell
-configureSecurity
 configureSsh
 configureNode
+configureGitLfs
 configureVisualStudioCode
 
 #Link dotfiles
 createSymlinks
 
 #fin
-cleanup
 ok "Complete."
