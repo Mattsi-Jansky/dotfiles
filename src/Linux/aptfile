@@ -10,3 +10,10 @@ lolcat
 postgresql
 graphviz
 git-lfs
+cmake
+libfontconfig1-dev
+pkg-config
+libfreetype6-dev
+libxcb-xfixes0-dev
+xclip
+xsel

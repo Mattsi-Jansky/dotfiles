@@ -11,6 +11,7 @@ source "$linuxDotfilesPath/config.sh"
 #Install dependencies
 requireAptGetDependencies
 requireSnapDependencies
+requireAlacritty
 
 #Config
 configureSnapAliases

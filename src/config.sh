@@ -12,7 +12,7 @@ function configureSsh() {
 function configureNode() {
     running "Configuring node/npm"
 
-    if [ environment -eq "Darwin" ]; then
+    if [ "$environment" -eq "Darwin" ]; then
         #Remove any brew-installed NPM/Node instances
         #This is because node/npm are managed by NVM,
         #yet Yarn may install node/npm as depenencies
