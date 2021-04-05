@@ -17,3 +17,5 @@ libfreetype6-dev
 libxcb-xfixes0-dev
 xclip
 xsel
+fish
+zsh

@@ -41,7 +41,6 @@ function installVisualStudioCodeExtensions() {
 }
 
 function installVsCodeExtension() {
-    running "Installing VSCode extension $1"
+    running "$1"
     silently code --install-extension $1
-    ok "Done"
 }
