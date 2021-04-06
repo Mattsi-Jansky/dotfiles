@@ -8,6 +8,7 @@ linuxDotfilesPath="$libpath/Linux"
 source "$linuxDotfilesPath/requirers.sh"
 source "$linuxDotfilesPath/config.sh"
 source "$libpath/echos.sh"
+source "$libpath/common.sh"
 
 #Install dependencies
 requireAptGetDependencies

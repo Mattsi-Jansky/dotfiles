@@ -3,8 +3,10 @@
 requireAptGetDependencies() {
     action "Installing apt-get dependencies"
 
-    sudo apt update
-    xargs -a $linuxDotfilesPath/aptfile sudo apt-get install -y 
+    running "Update apt"
+    try sudo apt update
+    running "Install packages"
+    try xargs -a $linuxDotfilesPath/aptfile sudo apt-get install -y 
 
     ok
 }
@@ -17,29 +19,35 @@ requireSnapDependencies() {
     snapClassic code
     snapClassic dotnet-sdk
     snapClassic powershell
-    sudo snap refresh
+    running "Update snaps"
+    try sudo snap refresh
 
     ok
 }
 
 snap() {
     running "$1"
-    sudo snap install $1
+    try sudo snap install $1
 }
 
 snapClassic() {
     running "$1"
-    sudo snap install --classic $1
+    try sudo snap install --classic $1
 }
 
 requireFonts() {
     action "Installing Linux fonts"
 
-    mkdir -p ~/.fonts
-    mkdir -p ~/.config/fontconfig/conf.d/
-    cp $dotfilesPath/config/fonts/Ubuntu\ Mono\ derivative\ Powerline.ttf ~/.fonts
-    cp $dotfilesPath/config/fonts/10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
-    sudo fc-cache
+    running "Ensure directories exist"
+    try mkdir -p ~/.fonts
+    running "Ensure directories exist"
+    try mkdir -p ~/.config/fontconfig/conf.d/
+    running "Copy font files"
+    try cp $dotfilesPath/config/fonts/Ubuntu\\ Mono\\ derivative\\ Powerline.ttf ~/.fonts
+    running "Copy font files"
+    try cp $dotfilesPath/config/fonts/10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
+    running "Reset font cache"
+    try sudo fc-cache
 
     ok
 }
@@ -48,12 +56,9 @@ requireAlacritty() {
     action "Installing Alacritty"
 
     pushd $linuxDotfilesPath
-        git clone https://github.com/alacritty/alacritty.git
+        try git clone https://github.com/alacritty/alacritty.git
         pushd ./alacritty
             #Build
-            echo "HELLO"
-            echo "$HOME"
-            source "$HOME/.cargo/env"
             cargo build --release --offline
             #Install terminfo
             sudo tic -xe alacritty,alacritty-direct extra/alacritty.info

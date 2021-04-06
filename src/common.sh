@@ -18,6 +18,15 @@ function silently() {
     $* > /dev/null 2>&1
 }
 
+function try() {
+    $* > /tmp/try.out 2>/tmp/try.error #Evaluate arguments, store result
+    if [ "$?" = 0 ] ; then # If command succeeded
+        ok
+    else
+        error "$(cat /tmp/try.out) $(cat /tmp/try.error)"
+    fi
+}
+
 function createSymlinks() {
     action "Linking dotfiles"
     createSymlinksFor shared
