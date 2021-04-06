@@ -27,8 +27,14 @@ export SDKMAN_DIR="$HOME/.sdkman"
 [[ ! -f "/usr/share/autojump/autojump.sh" ]] || source /usr/share/autojump/autojump.sh
 
 # cd shortcuts
-setopt auto_cd  autocd autopushd \ pushdignoredups
+setopt auto_cd  autocd
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
+
+# Autocompletion/Autosuggestion
+autoload -U compinit
+compinit
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#BBB"
