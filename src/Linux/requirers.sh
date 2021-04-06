@@ -55,27 +55,49 @@ requireFonts() {
 requireAlacritty() {
     action "Installing Alacritty"
 
-    pushd $linuxDotfilesPath
-        try git clone https://github.com/alacritty/alacritty.git
-        pushd ./alacritty
-            #Build
-            cargo build --release --offline
+    silently pushd $linuxDotfilesPath
+        running "Clone repository"
+        if [ -d "./alacritty" ]; then
+            ok "already exists"
+        else
+            try git clone https://github.com/alacritty/alacritty.git
+        fi
+        silently pushd ./alacritty
+            running "Building binary"
+            if [ -f "target/release/alacritty" ]; then
+                ok "already exists"
+            else
+                try cargo build --release --offline
+            fi
+
             #Install terminfo
             sudo tic -xe alacritty,alacritty-direct extra/alacritty.info
-            #Copy binaries, reset desktop info
-            sudo cp target/release/alacritty /usr/local/bin
-            sudo cp extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg
-            sudo desktop-file-install extra/linux/Alacritty.desktop
-            sudo update-desktop-database
+
+            running "Copying binary"
+            if [ -f "/usr/local/bin/alacritty" ]; then
+                ok "already exists"
+            else
+                sudo cp target/release/alacritty /usr/local/bin
+                sudo cp extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg
+                sudo desktop-file-install extra/linux/Alacritty.desktop
+                sudo update-desktop-database
+            fi
+
+            running "Add desktop entry"
+            try sudo desktop-file-install extra/linux/Alacritty.desktop
+            running "Resetting desktop database"
+            try sudo update-desktop-database
+
             #Install manpage
             sudo mkdir -p /usr/local/share/man/man1
             zip -c extra/alacritty.man | sudo tee /usr/local/share/man/man1/alacritty.1.gz > /dev/null
-        popd
-    popd
-    #Link config
-    silently mkdir -p ~/.config/alacritty
+        silently popd
+    silently popd
+    running "Linking config"
+    try mkdir -p ~/.config/alacritty
+    running "Linking config"
     silently unlink ~/.config/alacritty/alacritty.yml
-    ln -s $dotfilesPath/config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+    try ln -s $dotfilesPath/config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 
     ok
 }
