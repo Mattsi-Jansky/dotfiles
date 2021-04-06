@@ -25,3 +25,10 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 # Include Autojump
 [[ ! -f "/usr/share/autojump/autojump.sh" ]] || source /usr/share/autojump/autojump.sh
+
+# cd shortcuts
+setopt auto_cd  autocd autopushd \ pushdignoredups
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
