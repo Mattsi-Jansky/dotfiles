@@ -1,39 +1,52 @@
 
 function configureSsh() {
-    running "Configuring ssh"
-    mkdir -p ~/.ssh
-    if [ ! -f ~/.ssh/config ]; then
-        cp $dotfilesPath/config/ssh-config ~/.ssh/config
+    action "Configuring ssh"
+
+    running "Ensure ssh folder exists"
+    try mkdir -p ~/.ssh
+
+    running "Copying SSH config"
+    if [ -f ~/.ssh/config ]; then
+        ok "Already exists"
+    else
+        try cp $dotfilesPath/config/ssh-config ~/.ssh/config
         echo "Installed SSH config file..."
     fi
+
     ok
 }
 
 function configureNode() {
-    running "Configuring node/npm"
+    action "Configuring node/npm"
 
     if [ "$environment" -eq "Darwin" ]; then
         #Remove any brew-installed NPM/Node instances
         #This is because node/npm are managed by NVM,
         #yet Yarn may install node/npm as depenencies
         #See: https://github.com/creationix/nvm/issues/855#issuecomment-370187398
-        brew uninstall --ignore-dependencies --force node
-        brew uninstall --ignore-dependencies --force npm
-        brew cleanup
+        run "Uninstall brew node"
+        try brew uninstall --ignore-dependencies --force node
+        run "Uninstall brew node"
+        try brew uninstall --ignore-dependencies --force npm
+        run "Cleanup brew"
+        try brew cleanup
     fi
 
-    #Ensure latest node installed in NVM
     export NVM_DIR="$HOME/.nvm"
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-    nvm install node
-    nvm use node
+    running "Ensure latest node installed"
+    try nvm install node
+    running "Ensure latest node installed"
+    try nvm use node
 
-    # always pin versions (no surprises, consistent dev/build machines)
-    npm config set save-exact true
+    running "Always pin dependency versions"
+    try npm config set save-exact true
 
     ok
 }
 
 function configureGitLfs() {
-    git lfs install
+    action "Configure Git LFS"
+    try git lfs install
+    ok
 }

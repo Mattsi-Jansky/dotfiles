@@ -40,21 +40,20 @@ function tryGitClone() {
 
 function createSymlinks() {
     action "Linking dotfiles"
+
     createSymlinksFor shared
     createSymlinksFor $environment
+
     ok "dotfiles linked"
 }
 
 function createSymlinksFor() {
     source="$1"
-    action "Linking dotfiles"
     silently pushd $dotfilesPath/homedir/$1
         for file in .*; do
             if [[ $file == "." || $file == ".." || $file == ".git" ]]; then continue; fi
             running "~/$file"
-            createSymLink $file $source
-            echo -en '\tlinked'
-            ok
+            try createSymLink $file $source
         done
     silently popd
 }
