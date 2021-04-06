@@ -19,7 +19,7 @@ function silently() {
 }
 
 function try() {
-    $* > /tmp/try.out 2>/tmp/try.error #Evaluate arguments, store result
+    eval $* > /tmp/try.out 2>/tmp/try.error #Evaluate arguments, store result
     if [ "$?" = 0 ] ; then # If command succeeded
         ok
     else

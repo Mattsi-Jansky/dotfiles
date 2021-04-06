@@ -43,7 +43,7 @@ requireFonts() {
     running "Ensure directories exist"
     try mkdir -p ~/.config/fontconfig/conf.d/
     running "Copy font files"
-    try cp $dotfilesPath/config/fonts/Ubuntu\\ Mono\\ derivative\\ Powerline.ttf ~/.fonts
+    try cp "$dotfilesPath/config/fonts/Ubuntu\ Mono\ derivative\ Powerline.ttf" ~/.fonts
     running "Copy font files"
     try cp $dotfilesPath/config/fonts/10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
     running "Reset font cache"
