@@ -18,7 +18,7 @@ source $HOME/.dotfiles/powerlevel10k/powerlevel10k.zsh-theme
 
 #SDKMAN
 export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "/Users/mattsi/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/mattsi/.sdkman/bin/sdkman-init.sh"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

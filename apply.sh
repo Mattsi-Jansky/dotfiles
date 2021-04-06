@@ -15,7 +15,7 @@ $libpath/$environment/apply.sh
 requireNvm
 requireSdkMan
 requireJavaVersions
-requireRustVersions
+requireRust
 
 #Apply config settings
 configureSsh

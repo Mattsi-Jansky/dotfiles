@@ -9,3 +9,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 source "$HOME/.cargo/env"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/mattsi/.sdkman"
+[[ -s "/home/mattsi/.sdkman/bin/sdkman-init.sh" ]] && source "/home/mattsi/.sdkman/bin/sdkman-init.sh"
