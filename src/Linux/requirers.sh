@@ -57,11 +57,7 @@ requireAlacritty() {
 
     silently pushd $linuxDotfilesPath
         running "Clone repository"
-        if [ -d "./alacritty" ]; then
-            ok "already exists"
-        else
-            try git clone https://github.com/alacritty/alacritty.git
-        fi
+        tryGitClone alacritty alacritty ./alacritty
         silently pushd ./alacritty
             running "Building binary"
             if [ -f "target/release/alacritty" ]; then
@@ -107,10 +103,10 @@ requireCargoDependencies() {
 
     cargoInstall git-delta
 
-    ok "Cargo dependencies installed"
+    ok
 }
 
 cargoInstall() {
     running "$1"
-    cargo install $1
+    try cargo install $1
 }

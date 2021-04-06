@@ -27,6 +27,17 @@ function try() {
     fi
 }
 
+function tryGitClone() {
+    author=$1
+    repo=$2
+    destination=$3
+    if [ -d "$3" ]; then
+        ok "already exists"
+    else
+        try git clone https://github.com/$1/$2.git $3
+    fi
+}
+
 function createSymlinks() {
     action "Linking dotfiles"
     createSymlinksFor shared

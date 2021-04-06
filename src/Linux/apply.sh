@@ -15,8 +15,8 @@ requireAptGetDependencies
 requireSnapDependencies
 requireFonts
 requireAlacritty
+requireCargoDependencies
 
 #Config
 configureSnapAliases
 configureShell
-requireCargoDependencies
