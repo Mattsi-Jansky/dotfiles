@@ -38,3 +38,6 @@ autoload -U compinit
 compinit
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#BBB"
+
+#Bat (cat replacement) theme
+export BAT_THEME="ansi-light"
