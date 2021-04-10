@@ -5,7 +5,7 @@ fortune
 cowsay
 jq
 bat
-yarn
+yarnpkg
 lolcat
 postgresql
 graphviz
