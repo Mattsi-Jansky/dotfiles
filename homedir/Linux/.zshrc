@@ -39,5 +39,9 @@ compinit
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#BBB"
 
-#Bat (cat replacement) theme
+#Bat (cat replacement) theme`
 export BAT_THEME="ansi-light"
+
+#Ls colours
+LS_COLORS='no=00;37:fi=00:di=00;33:ln=04;36:pi=40;33:so=01;35:bd=40;33;01:'
+export LS_COLORS

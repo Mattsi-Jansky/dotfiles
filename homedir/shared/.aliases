@@ -33,10 +33,10 @@ alias gtree='git log --all --graph --decorate --oneline'
 alias gph='git push -u origin HEAD'
 
 # ls
-alias l='ls -1A' # one column
-alias ll='ls -lhFg' # lists w/human sizes
-alias la='ls -alhFg' # lists w/human sizes, w/hidden
-alias lr='ll -R' # lists w/human sizes, recursively
+alias l='ls -1A --color' # one column
+alias ll='ls -lhFg --color' # lists w/human sizes
+alias la='ls -alhFg --color' # lists w/human sizes, w/hidden
+alias lr='ll -R --color' # lists w/human sizes, recursively
 
 # df/du
 alias df='df -kh'
