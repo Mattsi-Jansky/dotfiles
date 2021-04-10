@@ -16,6 +16,7 @@ requireSnapDependencies() {
 
     snap slack
     snap exercism
+    snap docker
     snapClassic code
     snapClassic dotnet-sdk
     snapClassic powershell
