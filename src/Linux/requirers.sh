@@ -19,6 +19,7 @@ requireSnapDependencies() {
     snapClassic code
     snapClassic dotnet-sdk
     snapClassic powershell
+    snapClassic intellij-idea-ultimate
     running "Update snaps"
     try sudo snap refresh
 
