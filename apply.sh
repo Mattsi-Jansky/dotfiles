@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-dotfilesPath="$HOME/.dotfiles"
-libpath="$dotfilesPath/src"
+export dotfilesPath="$HOME/.dotfiles"
+export libpath="$dotfilesPath/src"
 environment="$(uname)"
 
 #Script dependencies
