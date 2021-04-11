@@ -29,10 +29,10 @@ requireJavaVersions() {
     try sdk install java
 
     running "Installing Java 8"
-    try sdk install java 8.0.265-zulu
+    try sdk install java 8.0.282-zulu
 
     running "Installing Java 11"
-    try sdk install java 11.0.8-zulu
+    try sdk install java 11.0.10-zulu
 
     running "Installing Java 14"
     try sdk install java 14.0.2-zulu
