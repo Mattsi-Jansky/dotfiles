@@ -16,13 +16,17 @@ requireSnapDependencies() {
 
     snap slack
     snap exercism
-    snap docker
     snapClassic code
     snapClassic dotnet-sdk
     snapClassic powershell
     snapClassic intellij-idea-ultimate
     running "Update snaps"
     try sudo snap refresh
+
+    running "Ensuring Docker group exists"
+    try sudo groupadd -f docker
+    running "Adding current user to Docker group"
+    try sudo usermod -aG docker $USER
 
     ok
 }
