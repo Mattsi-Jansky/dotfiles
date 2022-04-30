@@ -11,6 +11,11 @@ export NVM_DIR="$HOME/.nvm"
 #Cargo binaries
 export PATH=$PATH:$HOME/.cargo/bin
 
+#Local RC for settings relevant to the local machine I don't want to push to my dotfiles
+if [[ -f "$HOME/.localrc" ]]; then
+  source "$HOME/.localrc"
+fi
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/mattsi/.sdkman"
 [[ -s "/home/mattsi/.sdkman/bin/sdkman-init.sh" ]] && source "/home/mattsi/.sdkman/bin/sdkman-init.sh"
