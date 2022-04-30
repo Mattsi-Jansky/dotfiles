@@ -65,3 +65,6 @@ alias ps="ps -wax"
 
 #Groovy Wrapper alias
 alias gw="./gradlew"
+
+#Rust
+alias cw="cargo watch --clear -x"
