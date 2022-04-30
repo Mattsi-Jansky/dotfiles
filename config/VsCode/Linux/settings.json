@@ -13,5 +13,8 @@
     "java.project.importHint": false,
     "FSharp.suggestGitignore": false,
     "FSharp.suggestSdkScripts": false,
-    "java.configuration.checkProjectSettingsExclusions": false
+    "java.configuration.checkProjectSettingsExclusions": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "security.workspace.trust.enabled": false,
+    "javascript.updateImportsOnFileMove.enabled": "always"
 }
