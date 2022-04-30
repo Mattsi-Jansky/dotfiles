@@ -140,7 +140,7 @@
 
 [credential]
     # cache creds (git help credential-cache)
-  helper = cache
+	helper = store
 
 [filter "tabspace"]
   clean = expand -t 4
@@ -161,3 +161,7 @@
 	process = git-lfs filter-process
 [pull]
 	rebase = true
+[http]
+	postBuffer = 1048576000
+[https]
+	postBuffer = 1048576000
