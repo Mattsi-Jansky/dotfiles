@@ -11,7 +11,7 @@ requireSdkMan() {
     action "Installing SDKMAN"
 
     running "Run remote install script"
-    try curl -s "https://get.sdkman.io" \| bash
+    try curl -s "https://get.sdkman.io" | bash
     running "Init new install"
     try source "$HOME/.sdkman/bin/sdkman-init.sh"
 
