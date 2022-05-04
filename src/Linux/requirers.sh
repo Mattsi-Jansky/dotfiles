@@ -17,7 +17,6 @@ requireSnapDependencies() {
     snap slack
     snap exercism
     snapClassic code
-    snapClassic dotnet-sdk
     snapClassic powershell
     snapClassic intellij-idea-ultimate
     running "Update snaps"
