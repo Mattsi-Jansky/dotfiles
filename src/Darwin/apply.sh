@@ -3,6 +3,8 @@
 macDotfilesPath=$libpath/Darwin
 
 #Script dependencies
+source "$libpath/echos.sh"
+source "$libpath/common.sh"
 source "$macDotfilesPath/config.sh"
 source "$macDotfilesPath/requirers.sh"
 
