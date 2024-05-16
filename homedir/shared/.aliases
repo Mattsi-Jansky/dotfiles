@@ -1,3 +1,6 @@
+# Cargo
+alias c=cargo
+
 # terraform
 alias tf=terraform
 
@@ -53,7 +56,7 @@ alias path='echo $PATH | tr -s ":" "\n"'
 
 # Docker
 alias dr='docker'
-alias dc='docker-compose'
+alias dc='docker compose'
 
 #dotnet
 alias paket="~/.dotnet/tools/paket"
