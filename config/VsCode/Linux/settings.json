@@ -1,5 +1,4 @@
 {
-    "window.zoomLevel": 1,
     "workbench.iconTheme": "vscode-icons",
     "vsicons.dontShowNewVersionMessage": true,
     "editor.tabSize": 2,
@@ -16,5 +15,18 @@
     "java.configuration.checkProjectSettingsExclusions": false,
     "security.workspace.trust.untrustedFiles": "open",
     "security.workspace.trust.enabled": false,
-    "javascript.updateImportsOnFileMove.enabled": "always"
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "leetcode.workspaceFolder": "/home/mattsi/dev/rust",
+    "git.mergeEditor": false,
+    "git.openRepositoryInParentFolders": "never",
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    "window.zoomLevel": 1,
+    "editor.inlineSuggest.suppressSuggestions": true,
+    "typescript.updateImportsOnFileMove.enabled": "always"
 }
