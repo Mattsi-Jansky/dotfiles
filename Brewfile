@@ -1,8 +1,4 @@
-tap "homebrew/services"
-tap "homebrew/cask"
 tap "wata727/tflint"
-tap "homebrew/cask-fonts"
-tap "homebrew/cask-versions"
 
 #CLI apps
 brew "ack"
@@ -44,15 +40,13 @@ brew "rustup"
 #Docker
 cask "docker"
 brew "docker-completion"
-brew "docker-compose-completion"
-brew "docker-machine-completion"
 
 #GUI apps
 cask "intellij-idea"
 cask "visual-studio-code"
 cask "slack"
 cask "google-chrome"
-cask "firefox-nightly"
+cask "firefox"
 cask "tor-browser"
 cask "spotify"
 cask "iterm2"
